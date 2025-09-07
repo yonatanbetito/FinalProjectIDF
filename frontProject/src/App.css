@@ -1,0 +1,55 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#root{
+  width: 100%;
+  background-color: rgb(55, 195, 245);
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1,
+h2,
+h4 {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin-top: 15px;
+}
+h3{
+  width: 90%;
+display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 15px;
+
+}
+footer{
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+

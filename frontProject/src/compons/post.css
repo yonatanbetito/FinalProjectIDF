@@ -1,0 +1,29 @@
+.likes{
+
+}
+.like{
+
+}
+.post{
+ display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  word-break: break-all;
+  justify-content: space-between;
+  width: 22%;
+  max-width: 300px;
+  min-width: 250px;
+  border: 1px solid hsl(0, 100%, 2%);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 22px 22px 25px rgba(167, 32, 32, 0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.post:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
