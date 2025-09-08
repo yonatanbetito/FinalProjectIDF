@@ -6,12 +6,17 @@ import "./compons/Postim.css";
 import "./compons/Post.css";
 import Home from "./pages/Home";
 import Addpost from "./compons/AddPost";
+import NavHeader from "./compons/NavHeader";
+import { Routes, Route} from "react-router";
 
 function App() {
   return (
     <>
-      <Home />
-      <Addpost />
+    <NavHeader/>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/add" element={<Addpost />}/>
+      </Routes>
     </>
   );
 }

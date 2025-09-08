@@ -1,11 +1,18 @@
+
 .postim{
-  background-color: rgba(128, 128, 128, 0.241);
-  flex-wrap: wrap;
-  margin: 15px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin-top: 120px;
+  width: 100%;
+  gap: 12px;
+  padding: 12px;
+  background-color: rgba(128, 128, 128, 0.574);
 }
+
+
+img{
+  width: 100%;
+  height: auto;
+}
+

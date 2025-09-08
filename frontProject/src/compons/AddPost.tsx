@@ -1,7 +1,5 @@
 import { useState } from "react";
-import NavHeader from "./NavHeader";
 
-type postprops = {};
 
 export default function Addpost() {
   const [post, setPost] = useState("");
@@ -14,7 +12,6 @@ export default function Addpost() {
   return (
     <>
       <>
-        <NavHeader />
         <main>
           <form className="card" onSubmit={handleSubmit}>
             <div className="header-title">new post</div>
