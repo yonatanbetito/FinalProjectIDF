@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import routsinit from "./routes/confing.routes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ dotenv.config();
 const MONGODB_URL = process.env.MONGODB_URL;
 const PORT = process.env.PORT;
 const app = express();
+app.use(cors());
 
 //coection to db and runig server
 mongoose

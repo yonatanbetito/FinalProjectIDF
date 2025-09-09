@@ -5,11 +5,10 @@ import {
   updatePostById,
 } from "../services/post.service.js";
 
-const posts = await getposts();
-
 //all posts
 export async function allposts(req, res) {
   try {
+    const posts = await getposts();
     res.status(200).json(posts);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -18,17 +17,22 @@ export async function allposts(req, res) {
 
 //new post
 export async function newPost(req, res) {
-  const post = {
-    id: posts.length + 1,
-    urlimage: req.body.urlimage,
-    discribtion: req.body.discribtion,
-    postat: "",
-  };
-  if (!post) {
-    return res.status(400).send({ error: "post empty" });
+  try {
+    const posts = await getposts();
+    const post = {
+      id: posts.length + 1,
+      imgUrl: req.body.imgUrl,
+      text: req.body.text,
+      creatat: "",
+    };
+    if (!post) {
+      return res.status(400).send({ error: "post empty" });
+    }
+    const created = await createPost(post);
+    res.status(201).json(post);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
-  const created = await createPost(post);
-  res.status(201).json(post);
 }
 
 //delet post
@@ -46,17 +50,23 @@ export async function deletedPost(req, res) {
 }
 
 // updete post by id
-export function updatePost(req, res) {
-  const id = req.params.id;
-  const post = {
-    id: id,
-    urlimage: req.body.urlimage,
-    discribtion: req.body.discribtion,
-    postat: "",
-  };
-  if (!post) {
-    return res.status(400).send({ error: "post empty" });
+export async function updatePost(req, res) {
+  try {
+    const id = req.params.id;
+    const post = {
+      id: id,
+      imgUrl: req.body.imgUrl,
+      text: req.body.text,
+      creatat: "",
+    };
+
+    const updated = await updatePostById(id, post);
+    if (!updated || updated === -1) {
+      return res.status(404).json({ error: "post id not found" });
+    }
+
+    return res.status(200).json(updated);
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
   }
-  updatePostById(id, post);
-  res.status(200).json(post);
 }

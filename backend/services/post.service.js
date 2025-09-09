@@ -10,7 +10,7 @@ export  async function getposts() {
 export  async function createPost(postData) {
   let post = postData
   //add time post
-  post.postat = timepost()
+  post.creatat = timepost()
   return await createpostDB(post);
 }
 // delete post bu id
