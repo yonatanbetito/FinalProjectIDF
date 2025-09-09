@@ -1,7 +1,7 @@
 import fs from "node:fs";
-import dotenv, { config } from "dotenv"
+import dotenv from "dotenv"
 dotenv.config()
-const Path = process.env.PATH
+const Path = process.env.PATH_FILE
 //get all post
 export async function getAllPostsDB() {
   try {
