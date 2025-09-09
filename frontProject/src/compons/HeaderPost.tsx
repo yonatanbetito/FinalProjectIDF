@@ -1,11 +1,14 @@
-import Timepost from "./Timepost";
-import User from "./User";
 
-export default function HeaderPost() {
+type headerprops = {
+  username: string;
+  creatat: string;
+};
+
+export default function HeaderPost(props: headerprops) {
   return (
     <div className="headerpost">
-      <User name="yonatan" email="yonatan@gmail.com" password="1111" />
-      <Timepost />
+      <div>{props.username}</div>
+      <div>{props.creatat}</div>
     </div>
   );
 }

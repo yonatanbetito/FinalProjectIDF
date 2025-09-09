@@ -7,7 +7,7 @@
   height: 64px;            
   width: 100%;
 
-  background-color: rgb(23, 81, 228);
+  background-color: #1e2761;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@
 
 .slogen{
   margin: 0;
-  font-size: 1.25rem;    
+  font-size: 1.9rem;    
   color: #fff;
 }
 

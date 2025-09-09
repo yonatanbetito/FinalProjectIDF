@@ -28,7 +28,7 @@ export async function  updatePostById(id,updatedPost){
 //add create at
 export  function timepost(){
   const date = new Date().toLocaleDateString()
-  const time = new Date().toLocaleTimeString()
-  const postDate = `${date}  ${time}`
+  // const time = new Date().toLocaleTimeString()
+  const postDate = `${date}`
   return postDate
 }

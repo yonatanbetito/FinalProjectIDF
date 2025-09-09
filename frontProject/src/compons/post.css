@@ -2,6 +2,8 @@
 
 }
 .like{
+  background-color: brown;
+  margin-left: 10px;
 
 }
 .post{
@@ -11,15 +13,18 @@
   flex: 1 1 240px; 
   min-width: 250px;
   max-width: 360px;
-  min-height: 140px;
-  overflow-wrap: anywhere;
+  max-height: 400px;
+  min-height: 240px;
   border: 1px solid hsl(0, 100%, 2%);
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 22px 22px 25px rgba(167, 32, 32, 0.1);
   box-sizing: border-box;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.212);
+  
 }
 .post *{ word-break: break-word; }
 .post:hover {
