@@ -2,7 +2,7 @@ import Postim from "../compons/Postim";
 import { Link } from "react-router";
 export default function Home() {
   return (
-    <div>
+    <div id="all">
       <main>
         <Link to="/add"><button className="add-but">Add post</button></Link>
         <Postim />

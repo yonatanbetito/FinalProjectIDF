@@ -1,0 +1,17 @@
+.home-but {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-top: 15px;
+}
+.home-but:hover {
+  border-color: #00000c;
+  border: 2px solid ;
+}
+.home-but:focus,
+.home-but:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
