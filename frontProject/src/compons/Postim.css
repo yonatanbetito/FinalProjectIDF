@@ -15,6 +15,7 @@
 img{
   width: 95%;
   height: auto;
+  max-height: 200px;
   border-radius: 5px;
   align-self: center;
   background-color: black;

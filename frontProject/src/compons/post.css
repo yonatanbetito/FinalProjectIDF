@@ -24,7 +24,6 @@
   box-sizing: border-box;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.212);
-  
 }
 .post *{ word-break: break-word; }
 .post:hover {

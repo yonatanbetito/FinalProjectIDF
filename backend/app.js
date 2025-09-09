@@ -31,5 +31,8 @@ mongoose
 //pars the body to json - importent for the DB req
 app.use(bodyParser.json());
 
+//use static folder in express
+app.use(express.static("public"));
+
 //pass trow the routers
 routsinit(app);

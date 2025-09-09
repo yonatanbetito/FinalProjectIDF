@@ -3,7 +3,7 @@
     "id": 1,
     "text": "jkjdkdfjkjg dfkj",
     "creatat": "9/9/2025",
-    "likes": 7
+    "likes": 9
   },
   {
     "id": 2,
@@ -22,5 +22,17 @@
     "text": "kdjfgjdfgf",
     "creatat": "9/9/2025",
     "likes": 1
+  },
+  {
+    "id": 5,
+    "text": "loren(200)",
+    "creatat": "9/9/2025",
+    "likes": 0
+  },
+  {
+    "id": 6,
+    "text": "dfhgjjgykfutrtuyiihujkghhjkhkrjgkerhgnjrwtgjnbwljrebgljweblrjgbewjrbgljkebrgjklbejlrgbjkelwrbgjkwebrgjkegljfhxjcghugyfutdyfyguhijh;gulyfcgvhbuyfutdyuijhjbvhcgdtfyguihkj",
+    "creatat": "9/9/2025",
+    "likes": 0
   }
 ]

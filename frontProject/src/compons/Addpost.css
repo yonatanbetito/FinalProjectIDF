@@ -1,3 +1,23 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 240px; 
+  min-width: 250px;
+  max-width: 360px;
+  max-height: 400px;
+  min-height: 240px;
+  border: 1px solid hsl(0, 100%, 2%);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 22px 22px 25px rgba(167, 32, 32, 0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.212);
+}
+
 .home-but {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -14,4 +34,44 @@
 .home-but:focus,
 .home-but:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input,
+select,
+textarea {
+  color: #408ec6;
+  border: 1px solid #408ec6;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background: white
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1e2761;
+  outline: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 15px;
+  margin-bottom: 32px;
+  align-items: center;
+  justify-self: center;
+}
+.header-title{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin-top: 15px;
 }

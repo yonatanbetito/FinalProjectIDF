@@ -30,7 +30,7 @@ export default function Addpost() {
           <button className="home-but">Home</button>
         </Link>
         <form className="card" onSubmit={handleSubmit}>
-          <div className="header-title">new post</div>
+          <div className="header-title"><h1>new post</h1></div>
           <label>
             Post discribtion:
             <input
