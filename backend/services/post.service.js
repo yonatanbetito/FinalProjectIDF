@@ -1,34 +1,38 @@
-import {getAllPostsDB,createpostDB,deletepostByIdDB,updatePostByIdDB} from "../DAL/post.dal.js"
-
+import {
+  getAllPostsDB,
+  createpostDB,
+  deletepostByIdDB,
+  updatePostByIdDB,
+} from "../DAL/post.dal.js";
 
 // get all post
-export  async function getposts() {
+export async function getposts() {
   return await getAllPostsDB();
 }
 
 // create new post
-export  async function createPost(postData) {
-  let post = postData
+export async function createPost(postData) {
+  let post = postData;
   //add time post
-  post.creatat = timepost()
+  post.creatat = timepost();
   return await createpostDB(post);
 }
 // delete post bu id
-export async function deletePost(id){
-  return await deletepostByIdDB(id)
+export async function deletePost(id) {
+  return await deletepostByIdDB(id);
 }
 // update post by id
-export async function  updatePostById(id,updatedPost){
-  let post = updatedPost
+export async function updatePostById(id, updatedPost) {
+  let post = updatedPost;
   //updte time also
-  post.postat = timepost
-  return updatePostByIdDB(id,post)
+  post.creatat = timepost();
+  return updatePostByIdDB(id, post);
 }
 
 //add create at
-export  function timepost(){
-  const date = new Date().toLocaleDateString()
+export function timepost() {
+  const date = new Date().toLocaleDateString();
   // const time = new Date().toLocaleTimeString()
-  const postDate = `${date}`
-  return postDate
+  const postDate = `${date}`;
+  return postDate;
 }

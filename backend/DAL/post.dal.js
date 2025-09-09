@@ -1,7 +1,7 @@
 import fs from "node:fs";
-import dotenv from "dotenv"
-dotenv.config()
-const Path = process.env.PATH_FILE
+import dotenv from "dotenv";
+dotenv.config();
+const Path = process.env.PATH_FILE;
 //get all post
 export async function getAllPostsDB() {
   try {
@@ -54,6 +54,7 @@ export async function deletepostByIdDB(id) {
 export async function updatePostByIdDB(id, updatedPost) {
   try {
     const posts = await getAllPostsDB();
+    console.log(posts);
     let index = -1;
     for (let i = 0; i < posts.length; i++) {
       if (posts[i].id === parseInt(id)) {
@@ -63,7 +64,7 @@ export async function updatePostByIdDB(id, updatedPost) {
     }
 
     if (index === -1) {
-      console.log("not found post id to updae");
+      console.log("not found post id to updae!");
       return;
     }
 

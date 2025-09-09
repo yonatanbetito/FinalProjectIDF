@@ -29,6 +29,7 @@ export default function Postim() {
         {postim.map((p) => (
           <div key={p.id} className="post">
             <Post
+              id={p.id}
               imgurl={`${p.id}.png`}
               text={p.text}
               creatat={p.creatat}
@@ -40,18 +41,3 @@ export default function Postim() {
     </>
   );
 }
-
-//   return (
-//     <div>
-//       <h1>Riddles List</h1>
-//       <ul>
-//         {riddles.map((riddle) => (
-//           <li key={riddle.id}>
-//             <strong>{riddle.question}</strong>
-//             <div>{riddle.answer}</div>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }

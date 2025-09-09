@@ -3,6 +3,7 @@ import {
   newPost,
   allposts,
   deletedPost,
+  updatePost,
 } from "../controller/post.controller.js";
 
 const router = express.Router();
@@ -13,5 +14,7 @@ router.get("/post", allposts);
 router.post("/post", newPost);
 //delete post when you given id in parames
 router.delete("/post/:id", deletedPost);
+//update likes for post by id in parames
+router.put("/post/:id", updatePost);
 
 export default router;

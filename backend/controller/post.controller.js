@@ -21,9 +21,9 @@ export async function newPost(req, res) {
     const posts = await getposts();
     const post = {
       id: posts.length + 1,
-      imgUrl: req.body.imgUrl,
       text: req.body.text,
       creatat: "",
+      likes: 0,
     };
     if (!post) {
       return res.status(400).send({ error: "post empty" });
@@ -37,7 +37,7 @@ export async function newPost(req, res) {
 
 //delet post
 export async function deletedPost(req, res) {
-  let id = req.params.id;
+  const id = Number(req.params.id);
   try {
     const result = await deletePost(id);
     if (result === -1) {
@@ -52,19 +52,15 @@ export async function deletedPost(req, res) {
 // updete post by id
 export async function updatePost(req, res) {
   try {
-    const id = req.params.id;
+    const id = Number(req.params.id);
+    console.log(id);
     const post = {
       id: id,
-      imgUrl: req.body.imgUrl,
       text: req.body.text,
       creatat: "",
+      likes: req.body.likes,
     };
-
     const updated = await updatePostById(id, post);
-    if (!updated || updated === -1) {
-      return res.status(404).json({ error: "post id not found" });
-    }
-
     return res.status(200).json(updated);
   } catch (error) {
     return res.status(500).json({ error: error.message });
