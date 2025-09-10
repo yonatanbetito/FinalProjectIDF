@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Post from "./Post";
@@ -32,14 +31,14 @@ export default function PostPage() {
   return (
     <main>
       <h1>Post {post.id}</h1>
-        <div className="card">
-      <Post
-        id={post.id}
-        imgurl={`${post.id}.png`}
-        text={post.text}
-        creatat={post.creatat}
-        likes={post.likes}
-      />
+      <div className="card">
+        <Post
+          id={post.id}
+          imgurl={`${post.id}.png`}
+          text={post.text}
+          creatat={post.creatat}
+          likes={post.likes}
+        />
       </div>
     </main>
   );

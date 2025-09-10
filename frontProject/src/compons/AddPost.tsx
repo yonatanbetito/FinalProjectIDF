@@ -13,7 +13,7 @@ export default function Addpost() {
       userEmail,
     };
     try {
-      // Add post to global posts
+      //add post to global postim
       await fetch("http://localhost:3003/api/post", {
         method: "POST",
         headers: {
@@ -21,7 +21,7 @@ export default function Addpost() {
         },
         body: JSON.stringify(newPost),
       });
-      // Add post to user's posts array
+      //add post to user array
       await fetch("http://localhost:3003/api/user/addpost", {
         method: "POST",
         headers: {

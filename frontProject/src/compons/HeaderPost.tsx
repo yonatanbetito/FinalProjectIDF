@@ -1,4 +1,3 @@
-
 type headerprops = {
   username: string;
   creatat: string;

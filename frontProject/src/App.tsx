@@ -4,25 +4,25 @@ import "./compons/HeaderPost.css";
 import "./compons/post.css";
 import "./compons/Postim.css";
 import "./compons/Post.css";
-import "./compons/Addpost.css"
+import "./compons/Addpost.css";
 import Home from "./pages/Home";
 import Addpost from "./compons/AddPost";
 import NavHeader from "./compons/layout/NavHeader";
-import Bigpost from "./compons/BigPost"
-import { Routes, Route} from "react-router";
+import Bigpost from "./compons/BigPost";
+import { Routes, Route } from "react-router";
 import Login from "./pages/Login";
 import Register from "./pages/register";
 
 function App() {
   return (
     <>
-    <NavHeader/>
+      <NavHeader />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/add" element={<Addpost />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<Addpost />} />
         <Route path="/post/:id" element={<Bigpost />} />
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register />}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );

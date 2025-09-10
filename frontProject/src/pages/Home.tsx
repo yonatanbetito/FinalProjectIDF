@@ -8,12 +8,12 @@ export default function Home() {
           <Postim />
         ) : (
           <>
-            <h2>Please log in to see posts</h2>
+            <h1>Please log in to see posts</h1>
             <Login />
           </>
         )}
       </main>
-      <footer>v 1.0</footer>
+      <footer><h2>v 1.0</h2></footer>
     </div>
   );
 }
