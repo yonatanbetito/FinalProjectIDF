@@ -12,14 +12,18 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
 
-//connection to db and running server
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
 
+
+// Parse JSON
+app.use(express.json());
 
 //use static folder in express
 app.use(express.static("public"));
     
 //pass trow the routers
 routsinit(app);
+
+//connection to db and running server
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });

@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "text": "itself from other animals that want to eat it",
+    "text": "Weekend plans: relax, recharge, and spend time with family.",
     "creatat": "9/10/2025",
     "likes": 10
   },
   {
     "id": 2,
-    "text": "hello wolrd ",
+    "text": "Small steps every day lead to big changes over time.",
     "creatat": "9/10/2025",
     "likes": 15
   },
   {
     "id": 3,
-    "text": "gfhghhgfhgf",
+    "text": "Music always lifts my mood, no matter what happens.",
     "creatat": "9/10/2025",
     "likes": 19
   },
   {
     "id": 4,
-    "text": "kdjfgjdfgf",
+    "text": "Just finished a great book, highly recommend it to everyone!",
     "creatat": "9/9/2025",
     "likes": 1
   },
   {
     "id": 5,
-    "text": "loren(200)",
+    "text": "Learning new things every day keeps life interesting and exciting.",
     "creatat": "9/9/2025",
     "likes": 0
   },
@@ -45,23 +45,23 @@
     "id": 8,
     "text": "podrifkgope erfierojhe rgeirgjf e ergjeif fder",
     "creatat": "9/10/2025",
-    "likes": 0
+    "likes": 4
   },
   {
     "id": 9,
-    "text": "podrifkgope erfierojhe rgeirgjf e ergjeif fder",
+    "text": "Learning new things every day keeps life interesting and exciting.",
     "creatat": "9/10/2025",
     "likes": 0
   },
   {
     "id": 10,
-    "text": "i try to add",
+    "text": "Friends make every moment better, even on the toughest days.",
     "creatat": "9/10/2025",
     "likes": 0
   },
   {
     "id": 11,
-    "text": "wen some wone",
+    "text": "Achieved my goal after lots of hard work and dedication.",
     "creatat": "9/10/2025",
     "likes": 0
   },

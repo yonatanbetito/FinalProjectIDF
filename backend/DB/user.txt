@@ -54,5 +54,12 @@
         "userEmail": "david@gmail.com"
       }
     ]
+  },
+  {
+    "id": 8,
+    "email": "vw@gmail.com",
+    "password": "1234",
+    "name": "yoni",
+    "posts": []
   }
 ]
