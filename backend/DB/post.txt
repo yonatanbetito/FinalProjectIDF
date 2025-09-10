@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "text": "jkjdkdfjkjg dfkj",
-    "creatat": "9/9/2025",
-    "likes": 9
+    "text": "itself from other animals that want to eat it",
+    "creatat": "9/10/2025",
+    "likes": 10
   },
   {
     "id": 2,
     "text": "jkjdkdfjkjg dfkj",
-    "creatat": "9/9/2025",
-    "likes": 12
+    "creatat": "9/10/2025",
+    "likes": 13
   },
   {
     "id": 3,
@@ -31,8 +31,26 @@
   },
   {
     "id": 6,
-    "text": "dfhgjjgykfutrtuyiihujkghhjkhkrjgkerhgnjrwtgjnbwljrebgljweblrjgbewjrbgljkebrgjklbejlrgbjkelwrbgjkwebrgjkegljfhxjcghugyfutdyfyguhijh;gulyfcgvhbuyfutdyuijhjbvhcgdtfyguihkj",
-    "creatat": "9/9/2025",
+    "text": "dfhgjjgykfut rtuyiihujkghh jkhkrjgkerhgnjrwtgjn bwljrebgljweblrjgbewjrbgljkebrg jklbejlrgbjkelwrbgjkwebrg jkegljfhxjcghugyfutdyfyguhijh; gulyfcgvhbuyfutd yuijhjbvhcgdt fyguihkj",
+    "creatat": "9/10/2025",
+    "likes": 4
+  },
+  {
+    "id": 7,
+    "text": "yonatan is going to supermarket today",
+    "creatat": "9/10/2025",
+    "likes": 0
+  },
+  {
+    "id": 8,
+    "text": "podrifkgope erfierojhe rgeirgjf e ergjeif fder",
+    "creatat": "9/10/2025",
+    "likes": 0
+  },
+  {
+    "id": 9,
+    "text": "podrifkgope erfierojhe rgeirgjf e ergjeif fder",
+    "creatat": "9/10/2025",
     "likes": 0
   }
 ]

@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <div id="all">
       <main>
-        <Link to="/add"><button className="add-but">Add post</button></Link>
         <Postim />
       </main>
       <footer>v 1.0</footer>

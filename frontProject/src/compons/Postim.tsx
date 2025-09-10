@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Post from "./Post";
+import { Link } from "react-router";
 
 type Postmodul = {
   id: string;
@@ -25,9 +26,10 @@ export default function Postim() {
 
   return (
     <>
-      <div className="postim">
-        {postim.map((p) => (
-          <div key={p.id} className="post">
+    <div className="postim">
+      {postim.map((p) => (
+        <Link key={p.id} to={`/post/${p.id}`} style={{ textDecoration: "none" }}>
+          <div className="post">
             <Post
               id={p.id}
               imgurl={`${p.id}.png`}
@@ -36,8 +38,11 @@ export default function Postim() {
               likes={p.likes}
             />
           </div>
-        ))}
-      </div>
+        </Link>
+      ))}
+    </div>
+  );
+
     </>
   );
 }

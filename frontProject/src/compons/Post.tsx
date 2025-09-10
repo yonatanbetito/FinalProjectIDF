@@ -33,7 +33,7 @@ export default function Post(props: postprops) {
     <>
       <HeaderPost username="yonatan" creatat={props.creatat} />
       <img src={`http://localhost:3003/${props.id}.jpg`} alt="dfg" />
-      <h3>{props.text}</h3>
+      <div className="textpost">{props.text}</div>
       <div className="likes">
         <button className="like" onClick={handleLike}>
           {likes}

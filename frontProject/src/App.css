@@ -77,15 +77,6 @@ h4 {
   white-space: nowrap;
   margin-top: 15px;
 }
-h3 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  color: white;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  padding: 10px;
-}
 footer {
   display: flex;
   justify-items: center;

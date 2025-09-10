@@ -4,7 +4,8 @@ import { Link } from "react-router";
 export default function Addpost() {
   const [post, setPost] = useState("");
   const [message, setMessage] = useState("");
-  function handleSubmit() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     const newPost = {
       text: post,
       creatat: "",
@@ -26,15 +27,13 @@ export default function Addpost() {
   return (
     <>
       <main>
-        <Link to="/">
-          <button className="home-but">Home</button>
-        </Link>
         <form className="card" onSubmit={handleSubmit}>
           <div className="header-title"><h1>new post</h1></div>
           <label>
             Post discribtion:
             <input
               type="text"
+              placeholder="Enter your post..."
               value={post}
               onChange={(e) => setPost(e.target.value)}
               required
@@ -44,7 +43,7 @@ export default function Addpost() {
             Add post
           </button>
         </form>
-        <div>{message}</div>
+        <div className="textpost">{message}</div>
       </main>
     </>
   );

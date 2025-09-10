@@ -15,6 +15,24 @@ export async function getAllPostsDB() {
   }
 }
 
+//get post by id
+export async function findPostIdDB(id){
+  const posts = await getAllPostsDB()
+  let index = -1;
+    for (let i = 0; i < posts.length; i++) {
+      if (posts[i].id === parseInt(id)) {
+        index = i;
+        break;
+      }
+    }
+    if (index === -1) {
+      console.log("not found.");
+      return ;
+    }
+    return posts[index]
+
+}
+
 //create new post
 export async function createpostDB(post) {
   try {
@@ -54,7 +72,6 @@ export async function deletepostByIdDB(id) {
 export async function updatePostByIdDB(id, updatedPost) {
   try {
     const posts = await getAllPostsDB();
-    console.log(posts);
     let index = -1;
     for (let i = 0; i < posts.length; i++) {
       if (posts[i].id === parseInt(id)) {
@@ -62,7 +79,6 @@ export async function updatePostByIdDB(id, updatedPost) {
         break;
       }
     }
-
     if (index === -1) {
       console.log("not found post id to updae!");
       return;
@@ -71,30 +87,6 @@ export async function updatePostByIdDB(id, updatedPost) {
     posts[index] = updatedPost;
     fs.writeFileSync(Path, JSON.stringify(posts, null, 2));
     console.log("post is updated.");
-  } catch (err) {
-    console.log("error:", err.message);
-  }
-}
-
-// delete post by id
-export async function deletePostByIdDB(id) {
-  try {
-    const posts = await getAllPostsDB();
-    let index = -1;
-    for (let i = 0; i < posts.length; i++) {
-      if (posts[i].id === parseInt(id)) {
-        index = i;
-        break;
-      }
-    }
-    if (index === -1) {
-      console.log("not post id found.");
-      return;
-    }
-
-    posts.splice(index, 1);
-    fs.writeFileSync(Path, JSON.stringify(posts, null, 2));
-    console.log("post deleted.");
   } catch (err) {
     console.log("error:", err.message);
   }

@@ -3,6 +3,7 @@ import {
   createpostDB,
   deletepostByIdDB,
   updatePostByIdDB,
+  findPostIdDB
 } from "../DAL/post.dal.js";
 
 // get all post
@@ -16,6 +17,12 @@ export async function createPost(postData) {
   //add time post
   post.creatat = timepost();
   return await createpostDB(post);
+}
+
+//get post
+export async function findPostId(id) {
+  return await findPostIdDB(id)
+  
 }
 // delete post bu id
 export async function deletePost(id) {

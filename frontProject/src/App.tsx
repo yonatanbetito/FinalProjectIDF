@@ -1,5 +1,5 @@
 import "./App.css";
-import "./compons/NavHeader.css";
+import "./compons/layout/NavHeader.css";
 import "./compons/HeaderPost.css";
 import "./compons/post.css";
 import "./compons/Postim.css";
@@ -7,7 +7,8 @@ import "./compons/Post.css";
 import "./compons/Addpost.css"
 import Home from "./pages/Home";
 import Addpost from "./compons/AddPost";
-import NavHeader from "./compons/NavHeader";
+import NavHeader from "./compons/layout/NavHeader";
+import Bigpost from "./compons/BigPost"
 import { Routes, Route} from "react-router";
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/add" element={<Addpost />}/>
+        <Route path="/post/:id" element={<Bigpost />} />
+
       </Routes>
     </>
   );
