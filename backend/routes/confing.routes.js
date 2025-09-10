@@ -1,6 +1,9 @@
-import router from "./post.route.js";
+import postrouter from "./post.route.js";
+import userrouter from "./user.route.js";
 const routsinit = (app) => {
-  app.use("/api", router);
+  app.use("/api/post", postrouter);
+  app.use("/api/user", userrouter);
+
 };
 
 export default routsinit;

@@ -10,6 +10,9 @@ export default function NavHeader() {
         <Link to="/add">
           <button className="add-but">Add post</button>
         </Link>
+        <Link to="/login">
+          <button className="login-but">Login</button>
+        </Link>
 
         <img src="link.jpg" alt="logo" className="logo" />
       </div>

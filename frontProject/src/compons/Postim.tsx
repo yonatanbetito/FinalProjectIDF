@@ -28,7 +28,7 @@ export default function Postim() {
     <>
     <div className="postim">
       {postim.map((p) => (
-        <Link key={p.id} to={`/post/${p.id}`} style={{ textDecoration: "none" }}>
+        <Link key={p.id} to={`/post/${p.id}`}>
           <div className="post">
             <Post
               id={p.id}
@@ -41,8 +41,6 @@ export default function Postim() {
         </Link>
       ))}
     </div>
-  );
-
     </>
   );
 }

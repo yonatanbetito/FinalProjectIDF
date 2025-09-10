@@ -7,17 +7,17 @@ import {
   postById
 } from "../controller/post.controller.js";
 
-const router = express.Router();
+const postrouter = express.Router();
 
 //get all posts
-router.get("/post", allposts);
+postrouter.get("/", allposts);
 // get post by id
-router.get("/post/:id" ,postById)
+postrouter.get("/:id" ,postById)
 //post new one
-router.post("/post", newPost);
+postrouter.post("/", newPost);
 //delete post when you given id in parames
-router.delete("/post/:id", deletedPost);
+postrouter.delete("/:id", deletedPost);
 //update likes for post by id in parames
-router.put("/post/:id", updatePost);
+postrouter.put("/:id", updatePost);
 
-export default router;
+export default postrouter;

@@ -10,6 +10,7 @@ import Addpost from "./compons/AddPost";
 import NavHeader from "./compons/layout/NavHeader";
 import Bigpost from "./compons/BigPost"
 import { Routes, Route} from "react-router";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/add" element={<Addpost />}/>
         <Route path="/post/:id" element={<Bigpost />} />
+        <Route path="/login" element={<Login/>}/>
 
       </Routes>
     </>

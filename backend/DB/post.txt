@@ -9,7 +9,7 @@
     "id": 2,
     "text": "jkjdkdfjkjg dfkj",
     "creatat": "9/10/2025",
-    "likes": 13
+    "likes": 14
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "id": 6,
     "text": "dfhgjjgykfut rtuyiihujkghh jkhkrjgkerhgnjrwtgjn bwljrebgljweblrjgbewjrbgljkebrg jklbejlrgbjkelwrbgjkwebrg jkegljfhxjcghugyfutdyfyguhijh; gulyfcgvhbuyfutd yuijhjbvhcgdt fyguihkj",
     "creatat": "9/10/2025",
-    "likes": 4
+    "likes": 7
   },
   {
     "id": 7,
