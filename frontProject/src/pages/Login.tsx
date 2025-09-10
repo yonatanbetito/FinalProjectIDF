@@ -10,17 +10,26 @@ export default function Login() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3003/api/users");
+      const res = await fetch("http://localhost:3003/api/user");
+      if (!res) {
+        setMessage("no pass");
+      }
       const data = await res.json();
+      console.log("data from server:", data);
       const user = data.find(
-        (user: { name: string; password: string }) => user.name === name && user.password === password
+        (user: { name: string; password: string }) =>
+          user.name === name && user.password === password
       );
       if (user) {
         setMessage("Login successful!");
-        nav("/frontProject/src/compons/Home.tsx");
+        localStorage.setItem("isLoggedIn", "true");
+
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
+        nav("/");
       } else {
         setMessage("Invalid name or password.");
-        <button><Link to="/frontProject/src/pages/register.tsx">Go to register</Link></button>
       }
     } catch (err) {
       setMessage("Network error: " + err);
@@ -28,32 +37,35 @@ export default function Login() {
   }
   return (
     <>
-    <main>
-    <div className="card">
-      <h1>Log in</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            name="name"
-            placeholder="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+      <main>
+        <div className="card">
+          <h1>Log in</h1>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                value={name}
+                required
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                placeholder="password"
+                value={password}
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button type="submit">login</button>
+          </form>
         </div>
-        <div>
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">login</button>
-      </form>
-      </div>
-      <p className="textpost">{message}</p></main>
+        <p className="textpost">{message}</p>
+      </main>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -11,7 +11,7 @@ export default function Register() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3003/api/users");
+      const res = await fetch("http://localhost:3003/api/user");
       const data = await res.json();
       const user = data.find((u: { email: string }) => u.email === email);
       if (user) {

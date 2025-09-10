@@ -1,5 +1,10 @@
 import { Link } from "react-router";
 export default function NavHeader() {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    window.location.reload();
+  };
   return (
     <>
       <div className="navheader">
@@ -10,10 +15,15 @@ export default function NavHeader() {
         <Link to="/add">
           <button className="add-but">Add post</button>
         </Link>
-        <Link to="/login">
-          <button className="login-but">Login</button>
-        </Link>
-
+        {isLoggedIn ? (
+          <button className="logout-but" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className="login-but">Login</button>
+          </Link>
+        )}
         <img src="link.jpg" alt="logo" className="logo" />
       </div>
     </>

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import dotenv from "dotenv";
 dotenv.config();
-const Path = process.env.PATH_FILE;
+const Path = process.env.PATH_FILE_P;
 //get all post
 export async function getAllPostsDB() {
   try {
@@ -9,6 +9,7 @@ export async function getAllPostsDB() {
     if (data) {
       return JSON.parse(data);
     }
+    return [];
   } catch (err) {
     console.log("error:", err.message);
     return [];
@@ -40,6 +41,7 @@ export async function createpostDB(post) {
     posts.push(post);
     fs.writeFileSync(Path, JSON.stringify(posts, null, 2));
     console.log("post saved.");
+    return post;
   } catch (err) {
     console.log("error:", err.message);
   }
@@ -63,6 +65,7 @@ export async function deletepostByIdDB(id) {
     posts.splice(index, 1);
     fs.writeFileSync(Path, JSON.stringify(posts, null, 2));
     console.log("post deleted.");
+
   } catch (err) {
     console.log("error:", err.message);
   }
@@ -87,6 +90,7 @@ export async function updatePostByIdDB(id, updatedPost) {
     posts[index] = updatedPost;
     fs.writeFileSync(Path, JSON.stringify(posts, null, 2));
     console.log("post is updated.");
+    return posts[index];
   } catch (err) {
     console.log("error:", err.message);
   }
