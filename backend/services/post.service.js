@@ -3,8 +3,9 @@ import {
   createpostDB,
   deletepostByIdDB,
   updatePostByIdDB,
-  findPostIdDB
+  findPostIdDB,
 } from "../DAL/post.dal.js";
+import { addPostToUserByEmail } from "../DAL/user.dal.js";
 
 // get all post
 export async function getposts() {
@@ -16,13 +17,17 @@ export async function createPost(postData) {
   let post = postData;
   //add time post
   post.creatat = timepost();
-  return await createpostDB(post);
+  const createdPost = await createpostDB(post);
+  //add post to user
+  if (post.userEmail) {
+    await addPostToUserByEmail(post.userEmail, createdPost);
+  }
+  return createdPost;
 }
 
 //get post
 export async function findPostId(id) {
-  return await findPostIdDB(id)
-  
+  return await findPostIdDB(id);
 }
 // delete post bu id
 export async function deletePost(id) {

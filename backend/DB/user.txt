@@ -1,14 +1,58 @@
 [
-    {
+  {
     "id": 1,
     "name": "roni",
     "email": "roni@gmail.com",
-    "password": "11"
+    "password": "11",
+    "posts": []
   },
   {
     "id": 2,
     "name": "yonatan",
     "email": "yoni@gmail.com",
-    "password": "14"
+    "password": "14",
+    "posts": []
+  },
+  {
+    "id": 3,
+    "email": "yona@gmail.com",
+    "password": "1234",
+    "name": "avi",
+    "posts": []
+  },
+  {
+    "id": 4,
+    "email": "beni@gmail.com",
+    "password": "1234",
+    "name": "beni",
+    "posts": []
+  },
+  {
+    "id": 5,
+    "email": "dani@gmail.com",
+    "password": "1111",
+    "name": "dani",
+    "posts": []
+  },
+  {
+    "id": 6,
+    "email": "dudi@gmail.com",
+    "password": "1212",
+    "name": "dudi",
+    "posts": []
+  },
+  {
+    "id": 7,
+    "email": "david@gmail.com",
+    "password": "1111",
+    "name": "david",
+    "posts": [
+      {
+        "text": "im david@gmail.com",
+        "creatat": "",
+        "likes": 0,
+        "userEmail": "david@gmail.com"
+      }
+    ]
   }
 ]

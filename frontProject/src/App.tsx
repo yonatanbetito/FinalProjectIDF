@@ -11,6 +11,7 @@ import NavHeader from "./compons/layout/NavHeader";
 import Bigpost from "./compons/BigPost"
 import { Routes, Route} from "react-router";
 import Login from "./pages/Login";
+import Register from "./pages/register";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/add" element={<Addpost />}/>
         <Route path="/post/:id" element={<Bigpost />} />
         <Route path="/login" element={<Login/>}/>
-
+        <Route path="/register" element={<Register />}/>
       </Routes>
     </>
   );

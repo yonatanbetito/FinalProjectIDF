@@ -26,21 +26,25 @@ export default function Postim() {
 
   return (
     <>
-    <div className="postim">
-      {postim.map((p) => (
-        <Link key={p.id} to={`/post/${p.id}`}>
-          <div className="post">
-            <Post
-              id={p.id}
-              imgurl={`${p.id}.png`}
-              text={p.text}
-              creatat={p.creatat}
-              likes={p.likes}
-            />
-          </div>
-        </Link>
-      ))}
-    </div>
+      <div className="postim">
+        {postim.length === 0 ? (
+          <h2>loading...</h2>
+        ) : (
+          postim.map((p) => (
+            <Link key={p.id} to={`/post/${p.id}`}>
+              <div className="post">
+                <Post
+                  id={p.id}
+                  imgurl={`${p.id}.png`}
+                  text={p.text}
+                  creatat={p.creatat}
+                  likes={p.likes}
+                />
+              </div>
+            </Link>
+          ))
+        )}
+      </div>
     </>
   );
 }

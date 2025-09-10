@@ -1,23 +1,33 @@
 import { useState } from "react";
-import { Link } from "react-router";
 
 export default function Addpost() {
   const [post, setPost] = useState("");
   const [message, setMessage] = useState("");
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const userEmail = localStorage.getItem("userEmail") || "";
     const newPost = {
       text: post,
       creatat: "",
       likes: 0,
+      userEmail,
     };
     try {
-      fetch("http://localhost:3003/api/post", {
+      // Add post to global posts
+      await fetch("http://localhost:3003/api/post", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newPost),
+      });
+      // Add post to user's posts array
+      await fetch("http://localhost:3003/api/user/addpost", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: userEmail, post: newPost }),
       });
       setMessage("Post added successfully!");
     } catch (error) {
@@ -28,7 +38,9 @@ export default function Addpost() {
     <>
       <main>
         <form className="card" onSubmit={handleSubmit}>
-          <div className="header-title"><h1>new post</h1></div>
+          <div className="header-title">
+            <h1>new post</h1>
+          </div>
           <label>
             Post discribtion:
             <input

@@ -12,17 +12,24 @@ export default function NavHeader() {
         <Link to="/">
           <button className="home-but">Home</button>
         </Link>
-        <Link to="/add">
-          <button className="add-but">Add post</button>
-        </Link>
         {isLoggedIn ? (
-          <button className="logout-but" onClick={handleLogout}>
-            Logout
-          </button>
+          <>
+            <Link to="/add">
+              <button className="add-but">Add Post</button>
+            </Link>
+            <button className="logout-but" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
         ) : (
-          <Link to="/login">
-            <button className="login-but">Login</button>
-          </Link>
+          <>
+            <Link to="/register">
+              <button className="add-but">Register</button>
+            </Link>
+            <Link to="/login">
+              <button className="login-but">Login</button>
+            </Link>
+          </>
         )}
         <img src="link.jpg" alt="logo" className="logo" />
       </div>

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import dotenv from "dotenv";
 dotenv.config();
 const Path = process.env.PATH_FILE_P;
+
 //get all post
 export async function getAllPostsDB() {
   try {
@@ -17,21 +18,20 @@ export async function getAllPostsDB() {
 }
 
 //get post by id
-export async function findPostIdDB(id){
-  const posts = await getAllPostsDB()
+export async function findPostIdDB(id) {
+  const posts = await getAllPostsDB();
   let index = -1;
-    for (let i = 0; i < posts.length; i++) {
-      if (posts[i].id === parseInt(id)) {
-        index = i;
-        break;
-      }
+  for (let i = 0; i < posts.length; i++) {
+    if (posts[i].id === parseInt(id)) {
+      index = i;
+      break;
     }
-    if (index === -1) {
-      console.log("not found.");
-      return ;
-    }
-    return posts[index]
-
+  }
+  if (index === -1) {
+    console.log("not found.");
+    return;
+  }
+  return posts[index];
 }
 
 //create new post
@@ -65,7 +65,6 @@ export async function deletepostByIdDB(id) {
     posts.splice(index, 1);
     fs.writeFileSync(Path, JSON.stringify(posts, null, 2));
     console.log("post deleted.");
-
   } catch (err) {
     console.log("error:", err.message);
   }

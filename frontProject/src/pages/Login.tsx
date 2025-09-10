@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function Login() {
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const nav = useNavigate();
@@ -10,20 +10,16 @@ export default function Login() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3003/api/user");
-      if (!res) {
-        setMessage("no pass");
-      }
-      const data = await res.json();
-      console.log("data from server:", data);
-      const user = data.find(
-        (user: { name: string; password: string }) =>
-          user.name === name && user.password === password
-      );
-      if (user) {
+      const res = await fetch("http://localhost:3003/api/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const result = await res.json();
+      if (result.success) {
         setMessage("Login successful!");
         localStorage.setItem("isLoggedIn", "true");
-
+        localStorage.setItem("userEmail", email);
         setTimeout(() => {
           window.location.reload();
         }, 100);
@@ -44,11 +40,11 @@ export default function Login() {
             <div>
               <input
                 type="text"
-                name="name"
-                placeholder="name"
-                value={name}
+                name="email"
+                placeholder="email"
+                value={email}
                 required
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>

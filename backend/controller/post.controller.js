@@ -3,7 +3,7 @@ import {
   createPost,
   deletePost,
   updatePostById,
-  findPostId
+  findPostId,
 } from "../services/post.service.js";
 
 //all posts
@@ -15,18 +15,17 @@ export async function allposts(req, res) {
     res.status(500).json({ error: error.message });
   }
 }
-
 //get post by id
-export async function postById(req,res){
-  const id = Number(req.params.id)
+export async function postById(req, res) {
+  const id = Number(req.params.id);
   try {
-    const post = await findPostId(id)
-    if (!post){
+    const post = await findPostId(id);
+    if (!post) {
       return res.status(404).json({ error: "post id not found" });
     }
     res.status(200).json(post);
   } catch (error) {
-    res.status(404).json({message: "post id not fund"})
+    res.status(404).json({ message: "post id not fund" });
   }
 }
 
